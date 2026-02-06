@@ -1,265 +1,155 @@
 # 📊 Telecom Customer Churn Prediction System
 
-## 📌 Project Introduction
-This project analyses historical telecom customer data to understand customer behaviour and predict churn.  
-The dataset includes customer demographics, service subscriptions, billing details, tenure, and churn status.  
-Using Exploratory Data Analysis (EDA) with Matplotlib visualizations, the study identifies patterns and trends that influence customer churn.  
-The insights gained help the organization make data-driven decisions to improve customer retention and reduce churn.
-
----
-
-## 📂 Data Collection and Scope
-The dataset contains historical telecom customer information where each record represents an individual customer.  
-It captures demographic details, service subscriptions, billing information, tenure, and churn status, enabling comprehensive exploratory analysis to identify factors influencing customer retention and churn.
-
----
-
-## 🗂 Dataset Structure
-
-### 1️⃣ Customer Identification
-- Customer ID
-
-### 2️⃣ Demographic Attributes
-- Gender  
-- Senior Citizen Status  
-- Partner  
-- Dependents  
-
-### 3️⃣ Service Subscription Attributes
-- SIM / Network Provider  
-- Phone Service  
-- Multiple Lines  
-- Internet Service Type (DSL, Fiber Optic, No Internet)  
-- Streaming TV  
-- Streaming Movies  
-
-### 4️⃣ Value-Added Services
-- Online Security  
-- Online Backup  
-- Device Protection  
-- Technical Support  
-
-### 5️⃣ Contract and Tenure Attributes
-- Contract Type (Month-to-Month, One-Year, Two-Year)  
-- Tenure (Number of months with the service)
-
-### 6️⃣ Billing and Payment Attributes
-- Monthly Charges  
-- Total Charges  
-- Payment Method  
-- Paperless Billing Status  
-
-### 7️⃣ Time-Based Attributes
-- Customer Joining Year  
-
-### 8️⃣ Target Variable
-- Churn Status (Yes / No)
-
----
-
-## 🔍 Analytical Approach and Visualization Strategy
-The project uses Exploratory Data Analysis (EDA) after basic data cleaning and validation.  
-Customer demographics, service usage, tenure, contract type, and billing behaviour are analysed to identify churn patterns.
-
-Matplotlib visualizations such as bar charts, histograms, and pie charts are used to:
-- Compare customer segments
-- Observe tenure trends
-- Analyse service adoption
-- Identify high-risk churn groups
-
----
-
-## 📈 Visualizations and Insights
-
-### 1. Partner Distribution
-Shows customer distribution based on partner status.
-- Helps understand correlation between relationship status and service presence.
-
----
-
-### 2. Churn Distribution
-Displays overall churn vs retained customers.
-- Highlights customer retention vs customer loss.
-- Reducing churn improves revenue stability.
-
----
-
-### 3. Churn Possibility per SIM Provider
-Compares churn across SIM providers:
-- Jio
-- Airtel
-- VI
-- BSNL
-
-**Insight:**  
-Some SIM providers show higher churn, indicating potential pricing or service quality issues.
-
----
-
-### 4. Year-wise Customer Distribution
-Shows SIM acquisition trends by year.
-- Helps understand growth, stability, or decline in customer onboarding.
-
----
-
-### 5. Total Charges by SIM Provider
-Displays cumulative charges by SIM provider.
-- Higher total charges indicate stronger loyalty and longer tenure.
-
----
-
-### 6. Average Monthly Charges by Churn
-Compares billing between churned and retained customers.
-- Churned customers generally have higher monthly charges.
-- Pricing significantly impacts churn behaviour.
-
----
-
-### 7. Average Tenure by Churn
-Compares customer tenure based on churn status.
-- Retained customers have significantly higher tenure.
-- Churn probability decreases as tenure increases.
-
----
-
-### 8. Gender Distribution Among Senior Citizens
-Shows male vs female senior customers.
-- Senior customers often show higher churn sensitivity.
-
----
-
-### 9. Paperless Billing Distribution
-Displays customers with and without paperless billing.
-- Digital billing adoption is high.
-- Paperless billing combined with auto-payment reduces churn risk.
-
----
-
-### 10. Streaming Movies Subscription
-Shows adoption of streaming movie services.
-- Many customers have not subscribed.
-- Internet availability strongly affects adoption.
-
----
-
-### 11. Streaming TV Subscription
-Displays Streaming TV usage.
-- Higher adoption among customers with stable internet.
-- Streaming subscribers show higher engagement.
-
----
-
-### 12. Tenure Distribution
-Shows customer count by tenure range.
-- High churn occurs in early tenure stages.
-- Long-tenure customers are more loyal.
-
----
-
-### 13. Contract Distribution
-Shows distribution across contract types.
-- Month-to-month contracts dominate.
-- Long-term contracts show lower churn risk.
-
----
-
-### 14. Customers by Dependents
-Shows dependent vs non-dependent customers.
-- Customers without dependents are more price-sensitive.
-
----
-
-### 15. Customers by Multiple Lines
-Displays single-line, multiple-line, and no phone service users.
-- Multiple-line customers show higher engagement.
-
----
-
-### 16. Gender Distribution
-Shows male vs female customers.
-- Helps understand overall customer composition.
-
----
-
-### 17. Phone Service Distribution
-Displays phone service adoption.
-- Phone service is a core offering.
-- Customers without phone service may churn more.
-
----
-
-### 18. Senior Citizen Distribution
-Shows senior vs non-senior customers.
-- Non-senior customers form the majority.
-- Seniors often need tailored support.
-
----
-
-### 19. SIM Services Usage
-Shows usage of phone, internet, and streaming services.
-- Value-added services have lower adoption.
-- Bundled services reduce churn.
-
----
-
-### 20. SIMs Taken by Year
-Displays year-wise SIM activation trends.
-- Peaks indicate strong promotions or market expansion.
-
----
-
-### 21. Share of SIM Providers
-Shows customer share across:
-- Jio
-- Airtel
-- VI
-- BSNL
-
-**Insight:**  
-Few providers dominate the market, indicating strong brand presence.
-
----
-
-### 22. Payment Method Distribution
-Displays preferred payment methods:
-- Electronic Check
-- Credit Card (Auto)
-- Bank Transfer (Auto)
-- Mailed Check
-
-**Insight:**  
-Manual payment methods are linked with higher churn, while auto-pay users show stability.
-
----
-
-## ✅ Conclusion
-The analysis highlights that **tenure, contract type, payment method, service usage, and billing behaviour** are key drivers of customer churn.
-
-Customers with:
-- Short tenure
-- Month-to-month contracts
-- Manual payment methods
-- Limited service subscriptions  
-
-are more likely to churn.
-
-Whereas customers with:
-- Long-term contracts
-- Multiple services
-- Automated payments
-- Digital billing  
-
-show stronger retention.
-
-These insights support **data-driven retention strategies** and form a strong foundation for building predictive churn models.
-
----
-
-## 🛠 Tools & Technologies
-- Python
-- Pandas
-- Matplotlib
-- Exploratory Data Analysis (EDA)
-
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Powered Customer Retention Prediction System</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; margin: 40px; color: #222; }
+    h1, h2, h3 { color: #0b5394; }
+    h1 { border-bottom: 3px solid #0b5394; padding-bottom: 5px; }
+    h2 { margin-top: 40px; }
+    ul { margin-left: 20px; }
+    code { background: #f4f4f4; padding: 2px 5px; border-radius: 4px; }
+    .section { margin-bottom: 40px; }
+    .highlight { background: #eef4ff; padding: 15px; border-left: 5px solid #0b5394; }
+  </style>
+</head>
+<body>
+
+<h1>AI Powered Customer Retention Prediction System</h1>
+
+<div class="section">
+  <h2>Abstract</h2>
+  <p>
+    Customer churn is a major challenge in the telecom industry, directly affecting revenue and customer lifetime value. This project focuses on analysing telecom customer data to identify behavioural patterns and key factors influencing customer churn. Exploratory Data Analysis (EDA) and multiple machine learning models were applied to predict churn effectively. The study highlights that customers with shorter tenure, month-to-month contracts, higher monthly charges, and manual payment methods are more likely to churn, while long-term contracts and bundled services improve retention.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Introduction</h2>
+  <p>
+    Retaining existing customers is more cost-effective than acquiring new ones, making churn prediction a critical business objective. This project develops a machine learning-based system to predict telecom customer churn using demographic, service, contract, tenure, and billing information. Multiple classification algorithms were trained and evaluated to identify the most reliable churn prediction model.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Requirements</h2>
+  <ul>
+    <li>Python</li>
+    <li>NumPy, Pandas</li>
+    <li>Matplotlib, Seaborn</li>
+    <li>Scikit-learn</li>
+    <li>Imbalanced-learn</li>
+    <li>Flask</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Data Visualization</h2>
+  <p>
+    Data visualization was performed using Matplotlib and Seaborn to understand customer behaviour and churn patterns. Various plots such as bar charts, count plots, histograms, and box plots were used.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Feature Engineering</h2>
+  <ul>
+    <li>Handling missing values</li>
+    <li>Data separation (numerical & categorical)</li>
+    <li>Variable transformation</li>
+    <li>Outlier handling</li>
+    <li>Categorical encoding</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Feature Selection</h2>
+  <p>
+    Filter-based feature selection techniques were used to remove irrelevant and low-variance features. Hypothesis testing and variance threshold methods were applied to improve model stability and performance.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Data Balancing</h2>
+  <p>
+    The dataset exhibited class imbalance. To address this, SMOTE (Synthetic Minority Over-sampling Technique) was applied to generate synthetic minority class samples and improve model generalization.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Feature Scaling</h2>
+  <p>
+    Standard Scaling (Z-score normalization) was applied to numerical features to ensure all variables contribute equally during model training.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Model Training</h2>
+  <p>
+    The problem was framed as a binary classification task. Multiple models including Logistic Regression, KNN, Decision Tree, SVM, and Naive Bayes were trained and evaluated using the same training data.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Model Evaluation</h2>
+  <p>
+    Models were evaluated using accuracy, ROC curve, and AUC score. ROC–AUC was chosen as the primary metric due to its robustness to class imbalance.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Best Model</h2>
+  <div class="highlight">
+    <p>
+      Naive Bayes achieved the highest ROC–AUC score (~0.8366) among all trained models and was selected as the final model.
+    </p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Hyperparameter Tuning</h2>
+  <p>
+    GridSearchCV was used to identify the optimal hyperparameter configuration using cross-validation, improving model performance and generalization.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Deployment</h2>
+  <p>
+    A Flask-based web application was developed to allow users to input customer details and receive real-time churn predictions along with probability scores.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Conclusion</h2>
+  <p>
+    This project demonstrates how machine learning can be effectively used to predict customer churn and support proactive retention strategies. The end-to-end pipeline—from data preprocessing to deployment—highlights the practical application of data science in real-world business scenarios.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Future Enhancements</h2>
+  <ul>
+    <li>Integration of deep learning models (ANN, LSTM)</li>
+    <li>Real-time churn prediction pipelines</li>
+    <li>Interactive dashboards for churn monitoring</li>
+    <li>Scalable deployment architecture</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>References</h2>
+  <ul>
+    <li>https://www.kaggle.com/datasets/blastchar/telco-customer-churn</li>
+    <li>https://scikit-learn.org/</li>
+    <li>https://pandas.pydata.org/</li>
+    <li>https://flask.palletsprojects.com/</li>
+  </ul>
+</div>
+
+</body>
+</html>
 
